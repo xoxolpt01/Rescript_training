@@ -3,16 +3,28 @@ rule cp
   command = cp $i $out
 rule touch
  command = touch $out
-o triangle.cmi : cp ../bs/src/triangle.cmi
-o triangle.cmj : cp ../bs/src/triangle.cmj
-o triangle.cmt : cp ../bs/src/triangle.cmt
-o triangle.res : cp ../../src/triangle.res
-o first_comp.cmi : cp ../bs/src/first_comp.cmi
-o first_comp.cmj : cp ../bs/src/first_comp.cmj
-o first_comp.cmt : cp ../bs/src/first_comp.cmt
-o first_comp.res : cp ../../src/first_comp.res
-o moons_weight.cmi : cp ../bs/src/moons_weight.cmi
-o moons_weight.cmj : cp ../bs/src/moons_weight.cmj
-o moons_weight.cmt : cp ../bs/src/moons_weight.cmt
-o moons_weight.res : cp ../../src/moons_weight.res
-build install.stamp : touch triangle.cmi triangle.cmj first_comp.cmi first_comp.cmj moons_weight.cmi moons_weight.cmj 
+o loop.cmi : cp ../bs/src/loops/loop.cmi
+o loop.cmj : cp ../bs/src/loops/loop.cmj
+o loop.cmt : cp ../bs/src/loops/loop.cmt
+o loop.res : cp ../../src/loops/loop.res
+o frac_num.cmi : cp ../bs/src/data_type/frac_num.cmi
+o frac_num.cmj : cp ../bs/src/data_type/frac_num.cmj
+o frac_num.cmt : cp ../bs/src/data_type/frac_num.cmt
+o frac_num.res : cp ../../src/data_type/frac_num.res
+o math.opr.cmi : cp ../bs/src/data_type/math.opr.cmi
+o math.opr.cmj : cp ../bs/src/data_type/math.opr.cmj
+o math.opr.cmt : cp ../bs/src/data_type/math.opr.cmt
+o math.opr.res : cp ../../src/data_type/math.opr.res
+o triangle.cmi : cp ../bs/src/data_type/triangle.cmi
+o triangle.cmj : cp ../bs/src/data_type/triangle.cmj
+o triangle.cmt : cp ../bs/src/data_type/triangle.cmt
+o triangle.res : cp ../../src/data_type/triangle.res
+o first_comp.cmi : cp ../bs/src/data_type/first_comp.cmi
+o first_comp.cmj : cp ../bs/src/data_type/first_comp.cmj
+o first_comp.cmt : cp ../bs/src/data_type/first_comp.cmt
+o first_comp.res : cp ../../src/data_type/first_comp.res
+o moons_weight.cmi : cp ../bs/src/data_type/moons_weight.cmi
+o moons_weight.cmj : cp ../bs/src/data_type/moons_weight.cmj
+o moons_weight.cmt : cp ../bs/src/data_type/moons_weight.cmt
+o moons_weight.res : cp ../../src/data_type/moons_weight.res
+build install.stamp : touch loop.cmi loop.cmj frac_num.cmi frac_num.cmj math.opr.cmi math.opr.cmj triangle.cmi triangle.cmj first_comp.cmi first_comp.cmj moons_weight.cmi moons_weight.cmj 

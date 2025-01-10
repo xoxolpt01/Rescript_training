@@ -1,1 +1,1 @@
-#Here is just simple codes for training the rescript's syntax
+Here is just simple codes for training the rescript's syntax

@@ -1,8 +1,10 @@
 11.1.4
-/home/alex/rescript/syntaz_practice
+/home/alex/rescript/syntax_practice
 0
 0
-bsconfig.json	0x1.9df2e28a8b09bp+30
-src	0x1.9e0363195367ap+30
+bsconfig.json	0x1.9e03759ace3fbp+30
+src	0x1.9e03759d86917p+30
+src/loops	0x1.9e0378ac3eed9p+30
+src/data_type	0x1.9e0391a6202c2p+30
 ===
-/home/alex/rescript/syntaz_practice/node_modules/rescript/linux/rescript.exe	0x1.9e034800d7feap+30
+/home/alex/rescript/syntax_practice/node_modules/rescript/linux/rescript.exe	0x1.9e03759f67d9p+30

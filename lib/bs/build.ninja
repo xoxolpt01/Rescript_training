@@ -1,19 +1,28 @@
 rescript = 1
 rule astj
-  command = /home/alex/rescript/syntaz_practice/node_modules/rescript/linux/bsc.exe  -bs-v 11.1.4 -uncurried  -absname -bs-ast -o $out $i
-o src/triangle.ast : astj ../../src/triangle.res
+  command = /home/alex/rescript/syntax_practice/node_modules/rescript/linux/bsc.exe  -bs-v 11.1.4 -uncurried  -absname -bs-ast -o $out $i
+o src/loops/loop.ast : astj ../../src/loops/loop.res
 rule deps
-  command = /home/alex/rescript/syntaz_practice/node_modules/rescript/linux/bsb_helper.exe -hash b73f179b425defac400e1bf85499ddfd $in
+  command = /home/alex/rescript/syntax_practice/node_modules/rescript/linux/bsb_helper.exe -hash 58d01da94c8501753d473fec13e12acd $in
   restat = 1
-o src/triangle.d : deps src/triangle.ast
+o src/loops/loop.d : deps src/loops/loop.ast
 rule mij
-  command = /home/alex/rescript/syntaz_practice/node_modules/rescript/linux/bsc.exe -I src   -uncurried -bs-package-name my-rescript-project -bs-package-output commonjs:$in_d:.bs.js $i
+  command = /home/alex/rescript/syntax_practice/node_modules/rescript/linux/bsc.exe -I src/data_type -I src/loops -I src   -uncurried -bs-package-name my-rescript-project -bs-package-output commonjs:$in_d:.bs.js $i
   dyndep = 1
   restat = 1
-o src/triangle.cmj src/triangle.cmi ../../src/triangle.bs.js : mij src/triangle.ast
-o src/first_comp.ast : astj ../../src/first_comp.res
-o src/first_comp.d : deps src/first_comp.ast
-o src/first_comp.cmj src/first_comp.cmi ../../src/first_comp.bs.js : mij src/first_comp.ast
-o src/moons_weight.ast : astj ../../src/moons_weight.res
-o src/moons_weight.d : deps src/moons_weight.ast
-o src/moons_weight.cmj src/moons_weight.cmi ../../src/moons_weight.bs.js : mij src/moons_weight.ast
+o src/loops/loop.cmj src/loops/loop.cmi ../../src/loops/loop.bs.js : mij src/loops/loop.ast
+o src/data_type/frac_num.ast : astj ../../src/data_type/frac_num.res
+o src/data_type/frac_num.d : deps src/data_type/frac_num.ast
+o src/data_type/frac_num.cmj src/data_type/frac_num.cmi ../../src/data_type/frac_num.bs.js : mij src/data_type/frac_num.ast
+o src/data_type/math.opr.ast : astj ../../src/data_type/math.opr.res
+o src/data_type/math.opr.d : deps src/data_type/math.opr.ast
+o src/data_type/math.opr.cmj src/data_type/math.opr.cmi ../../src/data_type/math.opr.bs.js : mij src/data_type/math.opr.ast
+o src/data_type/triangle.ast : astj ../../src/data_type/triangle.res
+o src/data_type/triangle.d : deps src/data_type/triangle.ast
+o src/data_type/triangle.cmj src/data_type/triangle.cmi ../../src/data_type/triangle.bs.js : mij src/data_type/triangle.ast
+o src/data_type/first_comp.ast : astj ../../src/data_type/first_comp.res
+o src/data_type/first_comp.d : deps src/data_type/first_comp.ast
+o src/data_type/first_comp.cmj src/data_type/first_comp.cmi ../../src/data_type/first_comp.bs.js : mij src/data_type/first_comp.ast
+o src/data_type/moons_weight.ast : astj ../../src/data_type/moons_weight.res
+o src/data_type/moons_weight.d : deps src/data_type/moons_weight.ast
+o src/data_type/moons_weight.cmj src/data_type/moons_weight.cmi ../../src/data_type/moons_weight.bs.js : mij src/data_type/moons_weight.ast
