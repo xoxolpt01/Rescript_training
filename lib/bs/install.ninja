@@ -1,0 +1,18 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o triangle.cmi : cp ../bs/src/triangle.cmi
+o triangle.cmj : cp ../bs/src/triangle.cmj
+o triangle.cmt : cp ../bs/src/triangle.cmt
+o triangle.res : cp ../../src/triangle.res
+o first_comp.cmi : cp ../bs/src/first_comp.cmi
+o first_comp.cmj : cp ../bs/src/first_comp.cmj
+o first_comp.cmt : cp ../bs/src/first_comp.cmt
+o first_comp.res : cp ../../src/first_comp.res
+o moons_weight.cmi : cp ../bs/src/moons_weight.cmi
+o moons_weight.cmj : cp ../bs/src/moons_weight.cmj
+o moons_weight.cmt : cp ../bs/src/moons_weight.cmt
+o moons_weight.res : cp ../../src/moons_weight.res
+build install.stamp : touch triangle.cmi triangle.cmj first_comp.cmi first_comp.cmj moons_weight.cmi moons_weight.cmj 
